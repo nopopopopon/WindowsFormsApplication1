@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using WindowsFormsApplication1;
 
 namespace WindowsFormsApplication1
 {
@@ -45,7 +46,10 @@ namespace WindowsFormsApplication1
         
         private void timer1_Tick(object sender, EventArgs e)
         {
-               //  textBox1.Text = "初期テキスト";
+            //  textBox1.Text = "初期テキスト";
+
+            SAClass1.Wstatus(this, "おほーー");   
+
                 timer1.Stop();
             
         }
