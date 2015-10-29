@@ -48,7 +48,11 @@ namespace WindowsFormsApplication1
         {
             //  textBox1.Text = "初期テキスト";
 
-            SAClass1.Wstatus(this, "おほーー");   
+            string str1;
+            str1 = SAClass1.GetMyPath();
+            this.textBox2.Text = str1;
+
+            SAClass1.Wstatus(this, str1);   
 
                 timer1.Stop();
             
@@ -65,5 +69,9 @@ namespace WindowsFormsApplication1
 
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

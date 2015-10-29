@@ -39,6 +39,7 @@
             this.ToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -46,7 +47,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(77, 201);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 30);
             this.button1.TabIndex = 0;
@@ -67,7 +68,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(42, 60);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -131,20 +132,31 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(134, 18);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(42, 249);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox2.Size = new System.Drawing.Size(252, 71);
+            this.textBox2.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(328, 362);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
@@ -166,6 +178,7 @@
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem2;
         private System.Windows.Forms.StatusStrip statusStrip1;
         public System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
 
