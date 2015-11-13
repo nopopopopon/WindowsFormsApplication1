@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using WindowsFormsApplication1;
+
 
 namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
         public static Boolean flag1 = new Boolean();
+        const string mypath1 = @"c:\tmp\";
 
         public Form1()
         {
@@ -32,9 +33,9 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "ボタンが押されました";
+            SAClass1.Wstatus(this, "ボタンが押されました");
             // シフトJISのファイルの読み込み
-            string[] lines1 = File.ReadAllLines("z:\\Progtmp\\test.txt",
+            string[] lines1 = File.ReadAllLines(mypath1+"\\test.txt",
                System.Text.Encoding.GetEncoding("Shift_JIS"));
             foreach (string s in lines1)
             {
@@ -48,7 +49,7 @@ namespace WindowsFormsApplication1
         {
             //  textBox1.Text = "初期テキスト";
 
-            SAClass1.Wstatus(this, "おほーー");   
+            SAClass1.Wstatus(this, "タイムアップ");   
 
                 timer1.Stop();
             
@@ -61,7 +62,7 @@ namespace WindowsFormsApplication1
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            File.WriteAllLines(@"Z:\Progtmp\test2.txt", textBox1.Lines, System.Text.Encoding.GetEncoding("Shift_JIS"));
+            File.WriteAllLines(mypath1+@"test2.txt", textBox1.Lines, System.Text.Encoding.GetEncoding("Shift_JIS"));
 
         }
 
