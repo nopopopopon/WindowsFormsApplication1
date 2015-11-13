@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-
+using WindowsFormsApplication1;
 
 namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
         public static Boolean flag1 = new Boolean();
-        const string mypath1 = @"c:\tmp\";
 
         public Form1()
         {
@@ -33,9 +32,9 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SAClass1.Wstatus(this, "ボタンが押されました");
+            textBox1.Text = "ボタンが押されました";
             // シフトJISのファイルの読み込み
-            string[] lines1 = File.ReadAllLines(mypath1+"\\test.txt",
+            string[] lines1 = File.ReadAllLines("z:\\Progtmp\\test.txt",
                System.Text.Encoding.GetEncoding("Shift_JIS"));
             foreach (string s in lines1)
             {
@@ -49,7 +48,11 @@ namespace WindowsFormsApplication1
         {
             //  textBox1.Text = "初期テキスト";
 
-            SAClass1.Wstatus(this, "タイムアップ");   
+            string str1;
+            str1 = SAClass1.GetMyPath();
+            this.textBox2.Text = str1;
+
+            SAClass1.Wstatus(this, str1);   
 
                 timer1.Stop();
             
@@ -62,9 +65,13 @@ namespace WindowsFormsApplication1
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            File.WriteAllLines(mypath1+@"test2.txt", textBox1.Lines, System.Text.Encoding.GetEncoding("Shift_JIS"));
+            File.WriteAllLines(@"Z:\Progtmp\test2.txt", textBox1.Lines, System.Text.Encoding.GetEncoding("Shift_JIS"));
 
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
