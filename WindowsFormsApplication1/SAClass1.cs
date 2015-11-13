@@ -28,6 +28,7 @@ namespace WindowsFormsApplication1
             /* 文字列のうちパス部分だけ取得する using system.io必要 */
             appPath = Path.GetDirectoryName(appDir);
             return appPath;
+            /* わははは　てすとコメント */
         }
     }
 
